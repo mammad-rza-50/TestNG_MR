@@ -40,7 +40,7 @@ public class _01_Enable {
 
     @BeforeClass
     void InitialProsess() {
-        System.out.println("Initial Prosess are being made ");
+        System.out.println("Initial Prosess are being made");
         Logger logger = Logger.getLogger("");
         logger.setLevel(Level.SEVERE);
 

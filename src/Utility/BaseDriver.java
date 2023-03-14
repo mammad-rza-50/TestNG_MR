@@ -6,6 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.opera.OperaDriverInfo;
+import org.openqa.selenium.opera.OperaDriverService;
+import org.openqa.selenium.opera.OperaOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -15,13 +21,13 @@ import java.util.logging.Logger;
 
 public class BaseDriver {
     public static WebDriver driver;
+    public static WebDriverWait wait;
 
     @BeforeClass
     public void InitialProsess() {
         System.out.println("Initial Prosess are being made ");
         Logger logger = Logger.getLogger("");
         logger.setLevel(Level.SEVERE);
-
 
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
         ChromeOptions options = new ChromeOptions();
@@ -30,6 +36,11 @@ public class BaseDriver {
         //chromeOptions.setExperimentalOption("excludeSwitches", "disable-popup-blocking");
         // System.setProperty(EdgeDriverService.EDGE_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
         //  System.setProperty(SafariDriverService.SAFARI_DRIVER_EXE_PROPERTY,"true");
+
+//      System.setProperty(OperaDriverService.OPERA_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
+//      OperaOptions options = new OperaOptions();
+
+
 
         //driver = new ChromeDriver();
         //driver=new EdgeDriver();
@@ -46,6 +57,8 @@ public class BaseDriver {
 
         driver.manage().timeouts().implicitlyWait(dr); // Bütün weblementlerin element bazında, elemente özel işlem yapılmadan önce
         // hazır hale gelmesi verilen mühlet yani süre. // eğer 2 sn yükler
+
+        wait = new WebDriverWait(driver,Duration.ofSeconds(12));
         EnterMyAcc();
     }
 
@@ -60,6 +73,10 @@ public class BaseDriver {
 
         WebElement login = driver.findElement(By.cssSelector("input[type='submit']"));
         login.click();
+
+        Assert.assertTrue(driver.getTitle().equals("My Account"));
+        //Assert.assertEquals(driver.getTitle(),"My Account", "Login is failed");
+        //Assert.assertTrue(driver.getCurrentUrl().contains("account/account"));
     }
 
     @AfterClass

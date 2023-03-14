@@ -15,13 +15,16 @@ public class _02_Sample extends BaseDriver {
 
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
 
-        WebElement userName= driver.findElement(By.id("input-email"));
+        WebElement userName= driver.findElement(By
+                .id("input-email"));
+
         userName.sendKeys("blackmamed246@gmail.com");
 
         WebElement password= driver.findElement(By.id("input-password"));
         password.sendKeys("Tna250111sdet");
 
-        WebElement login = driver.findElement(By.cssSelector("input[type='submit']"));
+        WebElement login = driver.findElement(By
+                .xpath("//input[@type='submit']"));
         login.click();
 
        Assert.assertTrue(driver.getTitle().equals("My Account"));

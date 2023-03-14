@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">   <!--Butun Testleri ehate eden hisse-->
+
+    <test name="test1">  <!-- test1 i ehate eden bolum-->
+        <parameter name="message" value="I study Tester Tools"></parameter>
+
+        <classes>  <!-- isleyen classlarin yazildigi hisse-->
+
+            <class name="Gun04._04_ContactUs"></class>
+
+        </classes>
+    </test>
+
+    <test name="test2">  <!-- test1 i ehate eden bolum-->
+        <parameter name="message" value="I study new Tester Tools"></parameter>
+
+        <classes>  <!-- isleyen classlarin yazildigi hisse-->
+
+            <class name="Gun04._04_ContactUs"></class>
+
+        </classes>
+    </test>
+</suite>

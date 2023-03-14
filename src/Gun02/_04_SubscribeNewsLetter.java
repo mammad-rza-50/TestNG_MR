@@ -11,7 +11,7 @@ public class _04_SubscribeNewsLetter extends BaseDriver {
       Senaryo
       1- Siteyi açınız.
       2- Newsletter  Subscribe işlemini abone olunuz(YES)
-      3 - ayri bir site ile siteden cikin
+      3 - ayri bir test ile siteden cikin
       4-NewsLetter subscribe durumunu kontrol edin Yes ise No , No ise Yes edin
      */
 
@@ -45,7 +45,7 @@ public class _04_SubscribeNewsLetter extends BaseDriver {
         WebElement subscribeNo = driver.findElement(sunNo);
         subscribeNo.click();
 
-        WebElement contunieBtn = driver.findElement(sunNo);
+        WebElement contunieBtn = driver.findElement(contBtn);
         contunieBtn.click();
 
         Tools.successMessageValidation();
