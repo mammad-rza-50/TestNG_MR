@@ -1,6 +1,7 @@
 package Gun04;
 
 import Utility.BaseDriver;
+import Utility.BaseDriverParametrs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;

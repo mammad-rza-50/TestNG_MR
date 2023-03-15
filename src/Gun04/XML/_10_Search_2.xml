@@ -1,7 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">   <!--Butun Testleri ehate eden hisse-->
 
+<suite name="Suite">   <!--Butun Testleri ehate eden hisse-->
     <test name="test1">  <!-- test1 i ehate eden bolum-->
+
         <parameter name="findWords" value="mac"></parameter>
 
         <classes>  <!-- isleyen classlarin yazildigi hisse-->
@@ -11,7 +12,8 @@
         </classes>
     </test>
 
-    <test name="test2">  <!-- test1 i ehate eden bolum-->
+    <test name="test2">  <!-- test2 i ehate eden bolum-->
+
         <parameter name="findWords" value="samsung"></parameter>
 
         <classes>  <!-- isleyen classlarin yazildigi hisse-->

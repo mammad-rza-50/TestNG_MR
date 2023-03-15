@@ -90,7 +90,7 @@ public class _02_AddressFunctionality extends BaseDriver {
 
         WebElement firstName = driver.findElement(By.id("input-firstname"));
         firstName.clear();
-        firstName.sendKeys("Mammar");
+        firstName.sendKeys("Mammad");
         WebElement lastName = driver.findElement(By.id("input-lastname"));
         lastName.clear();
         lastName.sendKeys("Rza");
@@ -101,14 +101,15 @@ public class _02_AddressFunctionality extends BaseDriver {
         Tools.successMessageValidation();
 
     }
+
     @Test(dependsOnMethods = {"editAddress"})
-    void deleteAddress(){
+    void deleteAddress() {
 
         WebElement addressBook = driver.findElement(By.linkText("Address Book"));
         addressBook.click();
 
-        List<WebElement>  deleteAll =driver.findElements(By.linkText("Delete"));
-        WebElement eraseableAddress =deleteAll.get(deleteAll.size()-2);// siline bilir ikinci
+        List<WebElement> deleteAll = driver.findElements(By.linkText("Delete"));
+        WebElement eraseableAddress = deleteAll.get(deleteAll.size() - 2);// siline bilir ikinci
         eraseableAddress.click();
 
         Tools.successMessageValidation();

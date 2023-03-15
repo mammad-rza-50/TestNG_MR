@@ -1,0 +1,58 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Suite" parallel="tests" thread-count="2">
+    <test name="myTest1">
+
+        <parameter name="browserType" value="chrome"></parameter>
+
+        <classes>
+
+            <class name="Gun05._05_Task2"></class>
+
+        </classes>
+    </test>
+   <!-- <test name="myTest2">
+        <parameter name="findWords" value="mac"></parameter>
+        <parameter name="browserType" value="firebox"></parameter>
+        <classes>
+
+            <class name="Gun05._05_Task2"></class>
+
+        </classes>
+    </test> -->
+    <test name="myTest3">
+
+        <parameter name="browserType" value="edge"></parameter>
+        <classes>
+
+            <class name="Gun05._05_Task2"></class>
+
+        </classes>
+    </test>
+ <!--  <test name="myTest4">
+          <parameter name="findWords" value="mac"></parameter>
+          <parameter name="browserType" value="safari"></parameter>
+          <classes>
+
+              <class name="Gun05._01_SearchFunctionality"></class>
+
+          </classes>
+      </test>
+      <test name="myTest5">
+          <parameter name="findWords" value="mac"></parameter>
+          <parameter name="browserType" value="explorer"></parameter>
+          <classes>
+
+              <class name="Gun05._01_SearchFunctionality"></class>
+
+          </classes>
+      </test>
+    <test name="myTest6">
+          <parameter name="findWords" value="mac"></parameter>
+          <parameter name="browserType" value="opera"></parameter>
+          <classes>
+
+              <class name="Gun05._01_SearchFunctionality"></class>
+
+          </classes>
+      </test>  -->
+</suite>

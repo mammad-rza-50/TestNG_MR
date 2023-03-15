@@ -3,17 +3,17 @@
 
     <test name="test1">  <!-- test1 i ehate eden bolum-->
         <groups>
-          <!-- bunlardan basqa hamisi isleyecek-->
+            <!-- bunlardan basqa hamisi isleyecek-->
             <run>
                 <include name="Regression"></include>
                 <include name="SmokeTest"></include>
-        </run>
+            </run>
 
         </groups>
 
         <classes>  <!-- isleyen classlarin yazildigi hisse-->
 
-            <class name="Gun04._03_Groups" ></class>
+            <class name="Gun04._03_Groups"></class>
 
         </classes>
     </test>

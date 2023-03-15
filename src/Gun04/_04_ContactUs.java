@@ -17,8 +17,9 @@ public class _04_ContactUs extends BaseDriver {
   3- Submit ettikten sonra Contact US yazısını doğrulayınız.
  */
     @Test
-    @Parameters("message")// XMl-deki pametre name-i ile eyni olmali
-    void contactUs(String incomingMessage){
+    @Parameters("message")
+// XMl-deki pametre name-i ile eyni olmali
+    void contactUs(String incomingMessage) {
 
         WebElement contactUsBtn = driver.findElement(By
                 .linkText("Contact Us"));
@@ -31,9 +32,9 @@ public class _04_ContactUs extends BaseDriver {
         WebElement submit = driver.findElement(By
                 .cssSelector("[type='submit']"));
 
-        JavascriptExecutor js = (JavascriptExecutor)driver;
-        js.executeScript("arguments[0].scrollIntoView(true);",submit);
-        js.executeScript("arguments[0].click();",submit);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", submit);
+        js.executeScript("arguments[0].click();", submit);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("success"));
 

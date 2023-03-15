@@ -3,22 +3,21 @@
 
     <test name="test1">  <!-- test1 i ehate eden bolum-->
         <groups>
-          <!-- bunlardan basqa hamisi isleyecek-->
+            <!-- bunlardan basqa hamisi isleyecek-->
             <run>
                 <exclude name="Regression"></exclude>
-        </run>
+            </run>
 
         </groups>
 
         <classes>  <!-- isleyen classlarin yazildigi hisse-->
 
-            <class name="Gun04._03_Groups" >
+            <class name="Gun04._03_Groups">
                 <methods>
                     <!--xaric olacak methodlar-->
                     <exclude name="test5"></exclude>
                 </methods>
             </class>
-            
 
         </classes>
     </test>
