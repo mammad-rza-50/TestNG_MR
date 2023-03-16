@@ -19,7 +19,6 @@ public class _05_Task2 extends BaseDriverParametrs {
      */
 
     @Test(dataProvider = "phones")
-
     void SearchFunction(String text) {
 
         WebElement searchInput = driver.findElement(By

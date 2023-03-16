@@ -27,7 +27,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class BaseDriverParametrs {
-    public WebDriver driver;
+    public WebDriver driver;  // burada static goturuldu cunki her classin oz driveri var
     public static WebDriverWait wait;
 
     @BeforeClass
@@ -49,6 +49,7 @@ public class BaseDriverParametrs {
             case "firefox":
 
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
+                // System.setProperty("webdriver.gecko.driver","Path_of_Firefox_Driver");
                 driver = new FirefoxDriver();
                 System.out.println("FireBox started");
                 break;
@@ -64,23 +65,23 @@ public class BaseDriverParametrs {
                 driver = new EdgeDriver();
                 System.out.println("Edge started");
                 break;
-            case "explorer":
+//            case "explorer":
+//
+//                System.setProperty(InternetExplorerDriverService.IE_DRIVER_SILENT_PROPERTY, "true");
+//                driver = new InternetExplorerDriver();
+//                System.out.println("Explorer started");
 
-                System.setProperty(InternetExplorerDriverService.IE_DRIVER_SILENT_PROPERTY, "true");
-                driver = new InternetExplorerDriver();
-                System.out.println("Explorer started");
-
-                break;
+            // break;
             default:
                 System.setProperty(OperaDriverService.OPERA_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
+                //        driver = new OperaDriver();
+                //        System.out.println("Opera started");
                 break;
         }
-//        driver = new OperaDriver();
-//        System.out.println("Opera started");
 
-        // driver.manage().window().maximize(); // Ekranı max yapıyor.
+        driver.manage().window().maximize(); // Ekranı max yapıyor.
 
-        Duration dr = Duration.ofSeconds(25);
+        Duration dr = Duration.ofSeconds(30);
         driver.manage().timeouts().pageLoadTimeout(dr);
         // Sadece tüm sayfanın kodlarının bilgisyarınıza inmesi süresiyle ilgili
         // bu eklenmezse Selenium sayfa yüklenene kadar (sonsuza) bekler.:

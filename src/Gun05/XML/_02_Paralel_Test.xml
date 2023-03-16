@@ -1,22 +1,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="My Suite" parallel="tests" thread-count="2">
+<suite name="MySuite" parallel="tests" thread-count="2">
     <test name="myTest1">
-
+        <parameter name="findWords" value="mac"></parameter>
         <parameter name="browserType" value="chrome"></parameter>
 
         <classes>
 
-            <class name="Gun05._05_Task2"></class>
+            <class name="Gun05._01_SearchFunctionality"></class>
 
         </classes>
     </test>
 
     <test name="myTest2">
-
+        <parameter name="findWords" value="mac"></parameter>
         <parameter name="browserType" value="edge"></parameter>
         <classes>
 
-            <class name="Gun05._05_Task2"></class>
+            <class name="Gun05._01_SearchFunctionality"></class>
 
         </classes>
     </test>

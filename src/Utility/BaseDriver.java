@@ -41,12 +41,11 @@ public class BaseDriver {
 //      OperaOptions options = new OperaOptions();
 
 
-
         //driver = new ChromeDriver();
         //driver=new EdgeDriver();
         // driver=new SafariDriver();
 
-        // driver.manage().window().maximize(); // Ekranı max yapıyor.
+        driver.manage().window().maximize(); // Ekranı max yapıyor.
 
         Duration dr = Duration.ofSeconds(25);
         driver.manage().timeouts().pageLoadTimeout(dr);
@@ -58,7 +57,7 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(dr); // Bütün weblementlerin element bazında, elemente özel işlem yapılmadan önce
         // hazır hale gelmesi verilen mühlet yani süre. // eğer 2 sn yükler
 
-        wait = new WebDriverWait(driver,Duration.ofSeconds(12));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(12));
         EnterMyAcc();
     }
 
