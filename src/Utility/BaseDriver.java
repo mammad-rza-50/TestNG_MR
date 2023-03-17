@@ -58,7 +58,7 @@ public class BaseDriver {
         // hazır hale gelmesi verilen mühlet yani süre. // eğer 2 sn yükler
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(12));
-        EnterMyAcc();
+        //EnterMyAcc();
     }
 
     void EnterMyAcc() {

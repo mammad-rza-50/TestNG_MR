@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit">
+
+    <test name="testCase1">
+        <parameter name="name" value="Memmed"></parameter>
+        <parameter name="lastname" value="Rzayev"></parameter>
+        <parameter name="email" value="blackmamed_242@mail.ru"></parameter>
+        <parameter name="password" value="1234567"></parameter>
+        <classes>
+            <class name="Testing_Proje_4.TestingProje04"></class>
+        </classes>
+    </test>
+</suite>
