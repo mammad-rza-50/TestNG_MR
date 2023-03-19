@@ -15,8 +15,8 @@ public class _03_PlaceOrderElements  {
     public _03_PlaceOrderElements(){
 
         // Bu sayfadaki bütün elemenalrın driverlar bağlantısı gerekiyor
-        // bunun için aşağıdaki consructor eklendi ve için PageFatory ile
-        // driver üzerinden bu (this) sayfadaki bütün elemnalar ilşkilendirildi.
+        // bunun için aşağıdaki consructor eklendi ve için PageFactory ile
+        // driver üzerinden bu (this) sayfadaki bütün elemnalar ilişikilendirildi.
         // Böylece Sayfada dan nesne türetildiği zaman değil, kullanıldığı
         // anda elemanların bulunması aktif oluyor.Bu yöntemle bütün sayfalarda
         // aynı isimde elemanlar var ise buradaki tanımlama hepsi için geçerli hale
@@ -25,7 +25,7 @@ public class _03_PlaceOrderElements  {
         PageFactory.initElements(BaseDriver.driver,this);
     }
 
-    @FindBy(css = "[name='search']")
+    @FindBy(name="search")
     public WebElement searchInput;
 
     @FindBy(css = "[class='btn btn-default btn-lg']")

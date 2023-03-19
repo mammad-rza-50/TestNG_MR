@@ -4,8 +4,9 @@
     <test name="testCase1">
         <parameter name="name" value="Memmed"></parameter>
         <parameter name="lastname" value="Rzayev"></parameter>
-        <parameter name="email" value="blackmamed_242@mail.ru"></parameter>
+        <parameter name="email" value="blackmamed_268@mail.ru"></parameter>
         <parameter name="password" value="1234567"></parameter>
+        <parameter name="textAdobePhCs4" value="Adobe Photoshop CS4"></parameter>
         <classes>
             <class name="Testing_Proje_4.TestingProje04"></class>
         </classes>

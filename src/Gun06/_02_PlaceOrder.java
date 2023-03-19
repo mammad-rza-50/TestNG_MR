@@ -23,7 +23,7 @@ public class _02_PlaceOrder extends BaseDriver {
     @Test
     void Test() {
         WebElement searchInput = driver.findElement(By
-                .cssSelector("[name='search']"));
+                .name("search"));
         searchInput.sendKeys("ipod");
 
         WebElement searchBtn = driver.findElement(By
