@@ -1,8 +1,11 @@
 package GUn07;
 
 import Utility.BaseDriver;
+import Utility.Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -24,7 +27,7 @@ public class _01_WishList extends BaseDriver {
 
     @Test
     @Parameters("findText")
-    void Test(String text){
+    void Test(String text) {
 
         WebElement searchInput = driver.findElement(By
                 .name("search"));
@@ -33,13 +36,24 @@ public class _01_WishList extends BaseDriver {
         WebElement searchBtn = driver.findElement(By
                 .cssSelector("[class='btn btn-default btn-lg"));
         searchBtn.click();
+        List<WebElement> ipodList = driver.findElements(By.
+                xpath("(//div[@class='caption'])//a[text()]"));
+        int randomIpod = Tools.RandomGenerate(ipodList.size());
 
-        List<WebElement> ipodList =driver.findElements(By.
-                xpath("(//button[@data-original-title='Add to Wish List'])/i"));
-       WebElement randomIpod= ipodList.get((int)(Math.random()*3));
-       randomIpod.click();
+        String ipodText = ipodList.get(randomIpod).getText();// tiklanacaq elementin adini almaq
+        System.out.println("ipodText = " + ipodText);
 
+        List<WebElement> wishbtnList = driver.findElements(By.
+                xpath("//button[@data-original-title='Add to Wish List']"));
+        wishbtnList.get(randomIpod).click(); //random elementin wish ine tiklatmaq
 
+        wait.until(ExpectedConditions.elementToBeClickable(By.
+                id("wishlist-total"))).click();
+
+        List<WebElement> ipodConfirmMessage = driver.findElements(By.
+                cssSelector("[class='text-left']>a"));
+
+        Tools.ListContainsString(ipodConfirmMessage, ipodText);
 
     }
 }

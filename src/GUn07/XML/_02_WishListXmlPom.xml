@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+    <test name="test1">
+        <parameter name="findText" value="ipod"></parameter>
+
+        <classes>
+
+            <class name="GUn07._02_WishListPom"></class>
+
+        </classes>
+    </test>
+</suite>
