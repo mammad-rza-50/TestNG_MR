@@ -1,0 +1,107 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AllTestSuite" parallel="tests" thread-count="2">
+
+    <test name="ChromeTests">
+        <parameter name="mail" value="MRNAgroup@gmail.com"></parameter>
+        <parameter name="browserType" value="chrome"></parameter>
+        <classes>
+            <class name="TestNGProje5_1.TestNGProje5_1">
+                <methods>
+                    <include name="Test1"/>
+                    <include name="Test2"/>
+                    <include name="Test3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="ChromeTests2">
+        <parameter name="mail" value="MRNAgroup@gmail.com"></parameter>
+        <parameter name="browserType" value="chrome"></parameter>
+        <classes>
+            <class name="TestNGProje5_1.TestNGProje5_1">
+                <methods>
+                    <include name="Test4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="ChromeTests3">
+        <parameter name="mail" value="MRNAgroup@gmail.com"></parameter>
+        <parameter name="browserType" value="chrome"></parameter>
+        <classes>
+            <class name="TestNGProje5_1.TestNGProje5_1">
+                <methods>
+                    <include name="Test5"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="ChromeTests4">
+        <parameter name="browserType" value="chrome"></parameter>
+        <classes>
+            <class name="TestNGProje5_1.TestNGProje5_1">
+                <methods>
+                    <include name="Test6"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- xxxxxxx -->
+
+    <test name="EdgeTests">
+        <parameter name="mail" value="MRNAgroup@gmail.com"></parameter>
+        <parameter name="browserType" value="edge"></parameter>
+        <classes>
+            <class name="TestNGProje5_1.TestNGProje5_1">
+                <methods>
+                    <include name="Test1"/>
+                    <include name="Test2"/>
+                    <include name="Test3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="EdgeTests2">
+        <parameter name="mail" value="MRgroup@gmail.com"></parameter>
+        <parameter name="browserType" value="edge"></parameter>
+        <classes>
+            <class name="TestNGProje5_1.TestNGProje5_1">
+                <methods>
+                    <include name="Test4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="EdgeTests3">
+        <parameter name="mail" value="MRgroup@gmail.com"></parameter>
+        <parameter name="browserType" value="edge"></parameter>
+        <classes>
+            <class name="TestNGProje5_1.TestNGProje5_1">
+                <methods>
+                    <include name="Test5"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="EdgeTests4">
+        <parameter name="browserType" value="edge"></parameter>
+        <classes>
+            <class name="TestNGProje5_1.TestNGProje5_1">
+                <methods>
+                    <include name="Test6"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>
+

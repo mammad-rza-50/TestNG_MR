@@ -13,16 +13,16 @@ public class _01_SearchFunctionality extends BaseDriverParametrs {
 
     @Test
     @Parameters("findWords")
-    void SearchFunction(String text){
+    void SearchFunction(String text) {
 
-        WebElement searchInput=driver.findElement(By
+        WebElement searchInput = driver.findElement(By
                 .cssSelector("[name='search']"));
         searchInput.sendKeys(text);
 
-        WebElement searchBtn=driver.findElement(By
+        WebElement searchBtn = driver.findElement(By
                 .cssSelector("[class='btn btn-default btn-lg"));
         searchBtn.click();
-        List<WebElement> captions=driver.findElements(By.
+        List<WebElement> captions = driver.findElements(By.
                 cssSelector("div[class='caption']>h4"));
 
         for (WebElement capt : captions)

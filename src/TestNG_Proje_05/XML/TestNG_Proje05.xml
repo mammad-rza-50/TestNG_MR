@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MySuite" parallel="tests" thread-count="2">
+    <test name="myTest1">
+       <!--  <parameter name="username" value="turkeyts"></parameter>
+        <parameter name="password" value="TechnoStudy123"></parameter>  -->
+        <parameter name="browserType" value="chrome"></parameter>
+        <classes>
+            <class name="TestNG_Proje_05.TestNG_Proje05"></class>
+        </classes>
+    </test>
+  <!--  <test name="myTest2">
+        <parameter name="username" value="turkeyts"></parameter>
+        <parameter name="password" value="TechnoStudy123"></parameter>
+        <parameter name="browserType" value="edge"></parameter>
+        <classes>
+            <class name="TestNG_Proje_05.TestNG_Proje05"></class>
+        </classes>
+    </test>  -->
+</suite>

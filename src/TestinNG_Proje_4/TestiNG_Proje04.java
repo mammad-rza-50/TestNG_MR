@@ -1,7 +1,6 @@
-package Testing_Proje_4;
+package TestinNG_Proje_4;
 
 import Utility.BaseDriver;
-import Utility.Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,12 +10,11 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestingProje04 extends BaseDriver {
+public class TestiNG_Proje04 extends BaseDriver {
 
 
     @Test(priority = 1)

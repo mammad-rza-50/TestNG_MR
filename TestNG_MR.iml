@@ -9,6 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="seleniumhq.selenium.java" level="project" />
     <orderEntry type="library" name="testng" level="project" />
-    <orderEntry type="library" name="seleniumhq.selenium.opera.driver" level="project" />
+    <orderEntry type="library" name="seleniumhq.selenium.java1" level="project" />
   </component>
 </module>

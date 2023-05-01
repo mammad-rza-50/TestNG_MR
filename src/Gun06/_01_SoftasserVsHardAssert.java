@@ -11,7 +11,7 @@ public class _01_SoftasserVsHardAssert {
 
         String s1 = "Hello";
         System.out.println("Hard Assert before");
-        Assert.assertEquals("Hello1", s1, "Actual != Expected");
+        Assert.assertEquals("Hello", s1, "Actual != Expected");
         //Xeta olanda testi kirir
         System.out.println("Hard Assert after");
     }

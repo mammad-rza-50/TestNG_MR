@@ -20,23 +20,23 @@ public class _05_SearchFunctionality extends BaseDriver {
       4- aynı işlemi samsung için de yapınız
     */
 
-@Test
-@Parameters("findWords")
-    void SearchFunction(String text){
+    @Test
+    @Parameters("findWords")
+    void SearchFunction(String text) {
 
-   WebElement searchInput=driver.findElement(By
-           .cssSelector("[name='search']"));
- searchInput.sendKeys(text);
+        WebElement searchInput = driver.findElement(By
+                .cssSelector("[name='search']"));
+        searchInput.sendKeys(text);
 
-   WebElement searchBtn=driver.findElement(By
-            .cssSelector("[class='btn btn-default btn-lg"));
-   searchBtn.click();
-   List<WebElement> captions=driver.findElements(By.
-           cssSelector("div[class='caption']>h4"));
+        WebElement searchBtn = driver.findElement(By
+                .cssSelector("[class='btn btn-default btn-lg"));
+        searchBtn.click();
+        List<WebElement> captions = driver.findElements(By.
+                cssSelector("div[class='caption']>h4"));
 
-   for (WebElement capt : captions)
-       Assert.assertTrue(capt.getText().toLowerCase().contains(text.toLowerCase()));
+        for (WebElement capt : captions)
+            Assert.assertTrue(capt.getText().toLowerCase().contains(text.toLowerCase()));
 
-}
+    }
 
 }

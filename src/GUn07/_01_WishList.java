@@ -45,7 +45,7 @@ public class _01_WishList extends BaseDriver {
 
         List<WebElement> wishbtnList = driver.findElements(By.
                 xpath("//button[@data-original-title='Add to Wish List']"));
-        wishbtnList.get(randomIpod).click(); //random elementin wish ine tiklatmaq
+        wishbtnList.get(randomIpod).click(); //random elementin wish listine tiklatmaq
 
         wait.until(ExpectedConditions.elementToBeClickable(By.
                 id("wishlist-total"))).click();

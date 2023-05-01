@@ -8,7 +8,7 @@
         <parameter name="password" value="1234567"></parameter>
         <parameter name="textAdobePhCs4" value="Adobe Photoshop CS4"></parameter>
         <classes>
-            <class name="Testing_Proje_4.TestingProje04"></class>
+            <class name="TestinNG_Proje_4.TestiNG_Proje04"></class>
         </classes>
     </test>
 </suite>

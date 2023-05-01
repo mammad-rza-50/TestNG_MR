@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriverService;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaDriverInfo;
 import org.openqa.selenium.opera.OperaDriverService;
@@ -41,6 +43,8 @@ public class BaseDriver {
 //      OperaOptions options = new OperaOptions();
 
 
+
+         // driver = new FirefoxDriver();
         //driver = new ChromeDriver();
         //driver=new EdgeDriver();
         // driver=new SafariDriver();
@@ -83,5 +87,6 @@ public class BaseDriver {
 
         Tools.Wait(5);
         driver.quit();
+        System.out.println("Test finished");
     }
 }

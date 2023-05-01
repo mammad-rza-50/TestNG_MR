@@ -3,7 +3,7 @@
 
     <test name="test1">  <!-- test1 i ehate eden bolum-->
         <groups>
-            <!-- bunlardan basqa hamisi isleyecek-->
+
             <run>
                 <include name="Regression"></include>
                 <include name="SmokeTest"></include>

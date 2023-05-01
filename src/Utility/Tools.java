@@ -18,7 +18,8 @@ public class Tools {
 
     public static void successMessageValidation() {
 
-        WebElement msjLabel = BaseDriver.driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']"));
+        WebElement msjLabel = BaseDriver.driver.findElement(By.
+                xpath("//div[@class='alert alert-success alert-dismissible']"));
         Assert.assertTrue(msjLabel.getText().toLowerCase().contains("success"));
     }
 
@@ -37,7 +38,8 @@ public class Tools {
                 break;
             }
         }
-        if (isHave == false) {
+        if (isHave == false) //( ! isHave) ola biler
+        {
             Assert.fail();
         }
     }

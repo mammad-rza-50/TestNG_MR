@@ -15,7 +15,7 @@
             <class name="Gun04._03_Groups">
                 <methods>
                     <!--xaric olacak methodlar-->
-                    <exclude name="test5"></exclude>
+                    <exclude name="Test7"></exclude>
                 </methods>
             </class>
 

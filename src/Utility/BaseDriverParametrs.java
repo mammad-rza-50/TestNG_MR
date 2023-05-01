@@ -43,7 +43,7 @@ public class BaseDriverParametrs {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
                 driver = new ChromeDriver(options);
-                System.out.println("Chrome started");
+              //  System.out.println("Chrome started");
                 //chromeOptions.setExperimentalOption("excludeSwitches", "disable-popup-blocking");
                 break;
             case "firefox":
@@ -51,19 +51,19 @@ public class BaseDriverParametrs {
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
                 // System.setProperty("webdriver.gecko.driver","Path_of_Firefox_Driver");
                 driver = new FirefoxDriver();
-                System.out.println("FireBox started");
+               // System.out.println("FireBox started");
                 break;
             case "safari":
 
                 System.setProperty(SafariDriverService.SAFARI_DRIVER_EXE_PROPERTY, "true");
                 driver = new SafariDriver();
-                System.out.println("Safari started");
+               // System.out.println("Safari started");
                 break;
             case "edge":
 
                 System.setProperty(EdgeDriverService.EDGE_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
                 driver = new EdgeDriver();
-                System.out.println("Edge started");
+              //  System.out.println("Edge started");
                 break;
 //            case "explorer":
 //
@@ -81,7 +81,7 @@ public class BaseDriverParametrs {
 
         driver.manage().window().maximize(); // Ekranı max yapıyor.
 
-        Duration dr = Duration.ofSeconds(30);
+        Duration dr = Duration.ofSeconds(25);
         driver.manage().timeouts().pageLoadTimeout(dr);
         // Sadece tüm sayfanın kodlarının bilgisyarınıza inmesi süresiyle ilgili
         // bu eklenmezse Selenium sayfa yüklenene kadar (sonsuza) bekler.:
@@ -91,7 +91,7 @@ public class BaseDriverParametrs {
         driver.manage().timeouts().implicitlyWait(dr); // Bütün weblementlerin element bazında, elemente özel işlem yapılmadan önce
         // hazır hale gelmesi verilen mühlet yani süre. // eğer 2 sn yükler
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(12));
+        wait = new WebDriverWait(driver, dr);
         EnterMyAcc();
     }
 
@@ -117,5 +117,6 @@ public class BaseDriverParametrs {
 
         Tools.Wait(5);
         driver.quit();
+        System.out.println("Test finished");
     }
 }
